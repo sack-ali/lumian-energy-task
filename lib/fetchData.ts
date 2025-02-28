@@ -8,7 +8,8 @@ const password = "21e1c216c139466b827e258c2ed261d2";
 export const fetchData = async (): Promise<APIResponse | null> => {
     try {
         const requestBody = {
-            locale: "en",
+            locale: "tr",
+
             value: {},  
             queryParameters: {}  
         };
@@ -25,7 +26,7 @@ export const fetchData = async (): Promise<APIResponse | null> => {
             }
         );
 
-        console.log("API Full Response:", response.data);
+        console.log("API Full Response :" , response.data);
         return response.data;
     } catch (error: any) {
         console.error("API Fetch Error:", error.response ? JSON.stringify(error.response.data, null, 2) : error.message);

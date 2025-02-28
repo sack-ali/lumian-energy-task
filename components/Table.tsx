@@ -19,7 +19,7 @@ const Table: React.FC = () => {
 
     useEffect(() => {
         loadTableData();
-    }, []);
+    }, [language]);
 
    
     const loadTableData = async () => {
@@ -104,9 +104,7 @@ const Table: React.FC = () => {
     return (
         <div className="table-container">
             <div className="controls">
-                <button className="language-toggle" onClick={() => setLanguage(language === "en" ? "tr" : "en")}>
-                    {language === "en" ? "TR" : "EN"}
-                </button>
+                
                 <input
                     type="text"
                     placeholder="Search..."
